@@ -1,103 +1,81 @@
+import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
+  const skills = [
+    'React',
+    'Next.js',
+    'Node.js',
+    'Javascript',
+    'TypeScript',
+    'MongoDB',
+    'Tailwind CSS',
+    'Zustand',
+    'Postgres',
+    'Prisma',
+    'Socket.io',
+    'Vercel',
+    'Python',
+    'Java',
+    'Unity',
+    'Blender'
+  ]
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
+      {/* ABOUT SECTION */}
+      <section className="w-full max-w-2xl text-center mb-16">
+        <Image src={"/profileAvatar.png"} alt="Yash Garg" width={100} height={100} className="mx-auto my-3" />
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">Yash Garg</h1>
+        <h2 className="text-xl md:text-2xl font-mono text-[var(--accent)] mb-4">Full Stack Developer</h2>
+        <p className="text-gray-400 my-2">Email : <a href="mailto:yg292001@gmail.com" className="underline">yg292001@gmail.com</a>{" :)"}</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto">
+          I like to make applications with great user functionality that makes user experience great. I am passionate about my projects and I am always looking to learn new things in my day to day life.
+        </p>
+
+      </section>
+
+      {/* TECH STACK SECTION */}
+      <section className="w-full max-w-2xl mb-16">
+        <h3 className="text-lg font-semibold mb-4 text-left">Tech Stack</h3>
+        <ul className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-300">
+          {skills.map((skill, index) => <li key={index} className="px-3 py-1 bg-[#18181b] rounded-full">{skill}</li>)}
+        </ul>
+      </section>
+      {/* PROJECTS SECTION */}
+      <section className="w-full max-w-2xl mb-16">
+        <h3 className="text-lg font-semibold mb-4 text-left">Projects</h3>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
+            <h4 className="font-bold mb-1">VirtualMeet</h4>
+            <p className="text-gray-400 text-sm mb-2">A virtual event management platform built using MERN stack.</p>
+            <a href="https://virtual-meet-psi.vercel.app/" className="underline mr-3 text-[var(--accent)] text-md">Demo</a>
+            {/* <a href="https://github.com/mr-mods-yg/VirtualMeet" className="mr-3 underline text-[var(--accent)] text-md">Github</a> */}
+          </div>
+          <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
+            <h4 className="font-bold mb-1">ShadowTalk</h4>
+            <p className="text-gray-400 text-sm mb-2">A real-time room based chat platform built with MERN stack.</p>
+            <a href="https://shadow-talk-chat-app.vercel.app/" className="mr-3 underline text-[var(--accent)] text-md">Demo</a>
+            <a href="https://github.com/mr-mods-yg/shadow-talk-chat-app" className="mr-3 underline text-[var(--accent)] text-md">Github</a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Link href="/projects" className="mt-4 underline block">View All Projects</Link>
+      </section>
+      <section className="w-full max-w-2xl mb-16">
+      <h3 className="text-lg font-semibold mb-2">Badges</h3>
+
+        <Image src={'/holopin.png'} width={"600"} height={"200"} alt="holpoin board"></Image>
+      </section>
+      {/* CONTACT SECTION */}
+      <section className="w-full max-w-2xl text-center border-t border-[#232323] pt-8">
+        <h3 className="text-lg font-semibold mb-2">Contact</h3>
+        <p className="text-gray-400 mb-2">Email: <a href="mailto:yg292001@gmail.com" className="underline">yg292001@gmail.com</a></p>
+        <div className="flex justify-center gap-4">
+          <a href="https://github.com/mr-mods-yg" aria-label="GitHub" className="p-2 border rounded-md hover:bg-blue-800 hover:text-white"><Github/>GitHub</a>
+          <a href="https://www.linkedin.com/in/mr-mods/" aria-label="LinkedIn" className="p-2 border rounded-md hover:bg-blue-800 hover:text-white"><Linkedin/>LinkedIn</a>
+          <a href="https://x.com/mr_mods_yg" aria-label="X (Twitter)" className="p-2 border rounded-md hover:bg-blue-800 hover:text-white"><Twitter/> (Twitter)</a>
+        </div>
+      </section>
+    </main>
   );
 }
