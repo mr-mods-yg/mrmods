@@ -12,7 +12,7 @@ export default function Projects() {
             <h4 className="font-bold mb-1">VirtualMeet</h4>
             <p className="text-gray-400 text-sm mb-2">A virtual event management platform built using MERN stack.</p>
             <a href="https://virtual-meet-psi.vercel.app/" className="underline mr-3 text-[var(--accent)] text-md">Demo</a>
-            {/* <a href="https://github.com/mr-mods-yg/VirtualMeet" className="mr-3 underline text-[var(--accent)] text-md">Github</a> */}
+            <a href="https://github.com/mr-mods-yg/VirtualMeet" className="mr-3 underline text-[var(--accent)] text-md">Github</a>
           </div>
           <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
             <h4 className="font-bold mb-1">ShadowTalk</h4>
