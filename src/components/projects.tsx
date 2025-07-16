@@ -17,7 +17,7 @@ function ProjectsSection({ isHomePage }: { isHomePage: boolean }) {
                     Work in Progress
                 </span></h4>
                 <p className="text-gray-400 text-sm mb-2">Movie and TV Shows review platform built using Next.js.</p>
-                <a href="https://driplist.vercel.app/" className="underline mr-3 text-[var(--accent)] text-md">Demo</a>
+                <a href="https://driplist.in/" className="underline mr-3 text-[var(--accent)] text-md">Live</a>
                 {/* <a href="https://github.com/mr-mods-yg/driplist-next" className="mr-3 underline text-[var(--accent)] text-md">Github</a> */}
             </div>
             <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
@@ -31,7 +31,7 @@ function ProjectsSection({ isHomePage }: { isHomePage: boolean }) {
                 </div>
                 <h4 className="font-bold mb-1">VirtualMeet</h4>
                 <p className="text-gray-400 text-sm mb-2">A virtual event management platform built using MERN stack.</p>
-                <a href="https://virtual-meet-psi.vercel.app/" className="underline mr-3 text-[var(--accent)] text-md">Demo</a>
+                <a href="https://virtual-meet-psi.vercel.app/" className="underline mr-3 text-[var(--accent)] text-md">Live</a>
                 <a href="https://github.com/mr-mods-yg/VirtualMeet" className="mr-3 underline text-[var(--accent)] text-md">Github</a>
             </div>
             <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
@@ -45,7 +45,7 @@ function ProjectsSection({ isHomePage }: { isHomePage: boolean }) {
                 </div>
                 <h4 className="font-bold mb-1">ShadowTalk</h4>
                 <p className="text-gray-400 text-sm mb-2">A real-time room based chat platform built with MERN stack.</p>
-                <a href="https://shadow-talk-chat-app.vercel.app/" className="mr-3 underline text-[var(--accent)] text-md">Demo</a>
+                <a href="https://shadow-talk-chat-app.vercel.app/" className="mr-3 underline text-[var(--accent)] text-md">Live</a>
                 <a href="https://github.com/mr-mods-yg/shadow-talk-chat-app" className="mr-3 underline text-[var(--accent)] text-md">Github</a>
             </div>
             <div className="bg-[#18181b] rounded-lg p-5 text-left border border-[#232323]">
