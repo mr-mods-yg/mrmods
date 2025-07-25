@@ -29,8 +29,8 @@ export default function Home() {
         <h2 className="text-xl md:text-2xl font-mono text-[var(--accent)] mb-4">Full Stack Developer</h2>
         <p className="text-gray-400 my-2">Email : <a href="mailto:yg292001@gmail.com" className="underline">yg292001@gmail.com</a>{" :)"}</p>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto">
-          I like to make applications with great user functionality that makes user experience great. I am passionate about my projects and I am always looking to learn new things in my day to day life.
+        <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto whitespace-pre-wrap">
+          I like to build applications with great user functionality. I am passionate about my projects and I am always looking to learn new things in my day to day life.
         </p>
 
       </section>
@@ -39,7 +39,7 @@ export default function Home() {
       <section className="w-full max-w-2xl mb-16">
         <h3 className="text-lg font-semibold mb-4 text-left">Tech Stack</h3>
         <ul className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-300">
-          {skills.map((skill, index) => <li key={index} className="px-3 py-1 bg-[#18181b] rounded-full">{skill}</li>)}
+          {skills.map((skill, index) => <li key={index} className="px-3 py-1 bg-[#18181b] rounded-full hover:opacity-80">{skill}</li>)}
         </ul>
       </section>
       {/* PROJECTS SECTION */}
