@@ -24,19 +24,19 @@ export default function Home() {
     'Unity',
     'Blender'
   ]
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
       <div className="w-7/10 flex justify-end items-center gap-2">
-        {theme === "dark" ? "I walk the path of shadows 🌒" : "I shine with the power of the sun ☀️"}
+        {resolvedTheme === "dark" ? "I walk the path of shadows 🌒" : "I shine with the power of the sun ☀️"}
 
         <Button
           variant="outline"
           size="icon"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         >
-          {theme === "dark" ? (
+          {resolvedTheme === "dark" ? (
             <Sun className="h-5 w-5" />
           ) : (
             <Moon className="h-5 w-5" />
