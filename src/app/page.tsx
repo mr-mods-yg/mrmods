@@ -28,8 +28,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
-      <div className="w-7/10 flex justify-end items-center gap-2">
-        {resolvedTheme === "dark" ? "I walk the path of shadows 🌒" : "I shine with the power of the sun ☀️"}
+      <div className="w-full md:w-7/10 flex justify-end items-center gap-1 mb-8">
+        {resolvedTheme === "dark" ?
+          "I walk the path of shadows 🌒"
+          : "I shine with the power of the sun ☀️"}
 
         <Button
           variant="outline"
@@ -66,10 +68,10 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
       <section className="w-full max-w-2xl mb-8">
-        <h3 className="text-base font-semibold mb-4 text-left flex gap-2">My Latest Resume - <Link className="flex gap-0.5 underline items-center" href={"https://drive.google.com/file/d/1wMFjoYZUTdg0rs17RxET6tVH8vP9-9Xs/view?usp=sharing"}>Google Drive <ExternalLink size={16}/></Link></h3>
+        <h3 className="text-base font-semibold mb-4 text-left flex gap-2">My Latest Resume - <Link className="flex gap-0.5 underline items-center" href={"https://drive.google.com/file/d/1wMFjoYZUTdg0rs17RxET6tVH8vP9-9Xs/view?usp=sharing"}>Google Drive <ExternalLink size={16} /></Link></h3>
         <h3 className="text-base font-semibold mb-4 text-left">Projects I have built - <Link className="underline" href={"/projects"}>/projects</Link></h3>
         <h3 className="text-base font-semibold mb-4 text-left">My Holopin badges - <Link className="underline" href={"/holopin"}>/holopin</Link></h3>
-        <h3 className="text-base font-semibold mb-4 text-left">Check out my website - <Link className="underline" href={"https://www.driplist.in"}>DripList.in</Link> and my <Link className="underline" href={"https://www.driplist.in/u/mrmods"}>profile</Link> on it.</h3> 
+        <h3 className="text-base font-semibold mb-4 text-left">Check out my website - <Link className="underline" href={"https://www.driplist.in"}>DripList.in</Link> and my <Link className="underline" href={"https://www.driplist.in/u/mrmods"}>profile</Link> on it.</h3>
       </section>
       {/* <ProjectsSection isHomePage={true} /> */}
       {/* BADGES SECTION */}
