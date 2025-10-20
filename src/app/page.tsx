@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
-      <div className="w-full md:w-7/10 flex justify-end items-center gap-1 mb-8">
+      <div className="w-full md:w-7/10 flex justify-end items-center gap-2 mb-8">
         {resolvedTheme === "dark" ?
           "I walk the path of shadows 🌒"
           : "I shine with the power of the sun ☀️"}
