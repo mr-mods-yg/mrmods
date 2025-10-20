@@ -11,7 +11,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                             src="/torrent-search.png"
                             alt="Torrent Search Image"
                             fill
-                            style={{ objectFit: 'cover' }}
+                            style={{ objectFit: 'fill' }}
                         />
                     </div>
                     <h4 className="font-bold mb-1">Torrent Search</h4>
