@@ -54,7 +54,7 @@ export default function Home() {
         <p className="text-[var(--foreground)] my-2">Email : <Link href="mailto:yg292001@gmail.com" prefetch={false} className="underline">yg292001@gmail.com</Link>{" :)"}</p>
 
         <p className="text-base md:text-lg text-[var(--foreground)] max-w-xl mx-auto whitespace-pre-wrap">
-          I am a programmer who can fix annoying bugs, create something awesome, or make someone&apos;s dreams a reality.</p>
+          I am a programmer who can fix annoying bugs, create something awesome, or make someone&apos;s dream a reality.</p>
 
       </section>
 
