@@ -8,23 +8,21 @@ import Link from "next/link";
 import ProjectsSection from "@/components/custom/projects";
 
 const narutoQuotes = [
-  "I never go back on my word—that’s my ninja way!",
-  "I’ll become Hokage, no matter what!",
-  "I won’t let my friends get hurt.",
-  "Believe it!",
-  "I carry everyone’s hopes on my back.",
-  "I’m not alone anymore.",
-  "You’re not taking my bond away."
+  "Never give up, no matter what!",
+  "A bond can change everything.",
+  "Friends are worth fighting for.",
+  "The will of fire burns on.",
+  "Hope shines brighter than fear.",
+  "A true ninja never quits."
 ];
 
 const sasukeQuotes = [
-  "I walk my own path.",
-  "My goal is revenge. Nothing more.",
-  "I won’t let my past define me.",
-  "You’re still too weak.",
-  "I sever bonds… to grow stronger.",
-  "Hatred is my fuel.",
-  "I have my own version of justice."
+  "Revenge shapes the path forward.",
+  "Silence speaks louder than emotion.",
+  "A shinobi’s resolve never wavers.",
+  "Power comes with a price.",
+  "Darkness sharpens every decision.",
+  "A severed bond changes everything."
 ];
 
 export default function Home() {
