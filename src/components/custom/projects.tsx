@@ -14,7 +14,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     imageAlt="Torrent Search Image"
                     name="Torrent Search"
                     description="A simple torrent search client built using Flask (Python) that provides the service using public APIs."
-                    isWorkInProgress={true}
                     technologlies={["Python", "Flask", "REST API"]}
                     liveURL="https://torrent-search-pi.vercel.app/"
                     githubURL="https://github.com/mr-mods-yg/torrent-search"
@@ -24,7 +23,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     imageAlt="Discord Moderation bot Image"
                     name="Discord Moderation Bot"
                     description="A discord bot that helps server owners and administrators manage their online communities on Discord."
-                    isWorkInProgress={true}
                     technologlies={["Python", "discord.py", "REST API"]}
                     githubURL="https://github.com/mr-mods-yg/moderation-fun-bot-python"
                 />
