@@ -8,26 +8,10 @@ import Link from "next/link";
 import ProjectsSection from "@/components/custom/projects";
 import { GitHubCalendar } from "react-github-calendar";
 import { Clock } from "@/components/custom/clock";
+import skills from "@/data/skills";
 
 export default function Home() {
-  const skills = [
-    'React',
-    'Next.js',
-    'Node.js',
-    'Javascript',
-    'TypeScript',
-    'MongoDB',
-    'Tailwind CSS',
-    'Zustand',
-    'Postgres',
-    'Prisma',
-    'Socket.io',
-    'Vercel',
-    'Python',
-    'Java',
-    'Unity',
-    'Blender'
-  ]
+  
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
