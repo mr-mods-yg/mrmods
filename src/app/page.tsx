@@ -6,28 +6,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectsSection from "@/components/custom/projects";
-
-const narutoQuotes = [
-  "I never go back on my word—that’s my ninja way!",
-  "I’ll become Hokage, no matter what!",
-  "I won’t let my friends get hurt.",
-  "Friends are worth fighting for.",
-  "The will of fire burns on.",
-  "Hope shines brighter than fear.",
-  "Believe it!",
-  "I carry everyone’s hopes on my back.",
-  "You’re not taking my bond away."
-];
-
-const sasukeQuotes = [
-  "A shinobi’s resolve never wavers.",
-  "A severed bond changes everything.",
-   "I walk my own path.",
-  "My goal is revenge. Nothing more.",
-  "I won’t let my past define me.",
-  "I sever bonds… to grow stronger.",
-  "I have my own version of justice."
-];
+import { GitHubCalendar } from "react-github-calendar";
 
 export default function Home() {
   const skills = [
@@ -51,7 +30,7 @@ export default function Home() {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
+    <main className="min-h-screen flex flex-col items-center justify-center px-2 sm:px-4 py-5 sm:py-12 bg-[var(--background)] text-[var(--foreground)]">
       <motion.div initial={{ x: 50, opacity: 0 }}      // start off-screen right
         animate={{ x: 0, opacity: 1 }}       // move to center
         transition={{
@@ -59,9 +38,9 @@ export default function Home() {
           ease: "easeOut"
         }}
         className="w-full md:w-7/10 flex justify-end items-center gap-2 mb-8">
-        {resolvedTheme === "dark" ?
-          sasukeQuotes[Math.floor(Math.random() * sasukeQuotes.length)]
-          : narutoQuotes[Math.floor(Math.random() * narutoQuotes.length)]}
+        {/* {resolvedTheme === "dark" ?
+          "Dark Mode"
+          : "Light Mode"} */}
 
         <Button
           variant="outline"
@@ -135,24 +114,31 @@ export default function Home() {
       </motion.section>
 
       {/* PROJECTS SECTION */}
-
       <ProjectsSection isHomePage={true} />
-      {/* <section className="w-full max-w-2xl mb-8">
-        <h3 className="text-base font-semibold mb-4 text-left flex gap-2">My Latest Resume - <Link className="flex gap-0.5 underline items-center" href={"https://drive.google.com/file/d/1wMFjoYZUTdg0rs17RxET6tVH8vP9-9Xs/view?usp=sharing"}>Google Drive <ExternalLink size={16} /></Link></h3>
-        <h3 className="text-base font-semibold mb-4 text-left">Projects I have built - <Link className="underline" href={"/projects"}>/projects</Link></h3>
-        <h3 className="text-base font-semibold mb-4 text-left">My Holopin badges - <Link className="underline" href={"/holopin"}>/holopin</Link></h3>
-        <h3 className="text-base font-semibold mb-4 text-left">Check out my website - <Link className="underline" href={"https://www.driplist.in"}>DripList.in</Link> and my <Link className="underline" href={"https://www.driplist.in/u/mrmods"}>profile</Link> on it.</h3>
-      </section> */}
 
+      {/*  Github Contributions*/}
+      <motion.section initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16 flex flex-col gap-2 items-center">
+        <h3 className="text-lg font-semibold mb-2 w-full">Github Contributions</h3>
 
+        <GitHubCalendar
+          username="mr-mods-yg"
+          colorScheme={resolvedTheme as "light" | "dark"}
+          blockSize={12}
+          blockMargin={0.5}
+        />
+      </motion.section>
 
       {/* BADGES SECTION */}
       <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
+        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-8 flex flex-col gap-2">
         <h3 className="text-lg font-semibold mb-2">Badges</h3>
-        <Image src={'/holopin.png'} width={"600"} height={"200"} alt="holpoin board"></Image>
+        <Image src={'/holopin.png'} width={"600"} height={"200"} className="w-full object-cover" alt="holpoin board"></Image>
       </motion.section>
+
+
 
       {/* CONTACT SECTION */}
       <motion.section initial={{ y: 40, opacity: 0 }}

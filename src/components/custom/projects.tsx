@@ -10,6 +10,15 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 
             <div className="grid gap-6 md:grid-cols-2">
                 <ProjectCard
+                    imagePath="/image-dither.png"
+                    imageAlt="Torrent Search Image"
+                    name="Image dither"
+                    description="A tool that can be used to dither a image using various algorithms."
+                    technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
+                    liveURL="https://dither-image-five.vercel.app/"
+                    githubURL="https://github.com/mr-mods-yg/ditherImage"
+                />
+                <ProjectCard
                     imagePath="/torrent-search.png"
                     imageAlt="Torrent Search Image"
                     name="Torrent Search"
@@ -66,13 +75,25 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
             />
 
             <ProjectCard
-                imagePath="/bytesEditor.png"
-                imageAlt="BytesEditor Image"
-                name="Bytes code editor"
-                description="A simple code editor for creating, modifiying or/and debugging java programs."
-                technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
-                githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
+                imagePath="/vernaan.png"
+                imageAlt="Vernaan Image"
+                name="Vernaan - Landing page"
+                description="I made this landing page as an assignment in just three days. Figma design was given to me, I made it look similar, resposive and functional"
+                technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
+                liveURL="https://vernaan.vercel.app/"
+                githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
             />
+            {!isHomePage && <>
+                <ProjectCard
+                    imagePath="/bytesEditor.png"
+                    imageAlt="BytesEditor Image"
+                    name="Bytes code editor"
+                    description="A simple code editor for creating, modifiying or/and debugging java programs."
+                    technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
+                    githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
+                />
+
+            </>}
             {isHomePage ?
                 <Link href="/projects" className="mt-4 underline block">View All Projects</Link>
                 :
