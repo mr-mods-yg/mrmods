@@ -32,29 +32,37 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-2 sm:px-4 py-5 sm:py-12 bg-[var(--background)] text-[var(--foreground)]">
-      <motion.section initial={{ x: 50, opacity: 0 }}      // start off-screen right
-        animate={{ x: 0, opacity: 1 }}       // move to center
+
+      {/* Upper Bar (Clock + Toggle Theme + Github) */}
+      <motion.section initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{
           duration: 0.5,
           ease: "easeOut"
         }}
         className="w-full max-w-2xl text-center mb-8 flex justify-between items-center gap-2">
-        <Clock/>
-        <Button
-          variant="outline"
-          size="icon"
-          className="rounded-xs"
-          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        >
-          {resolvedTheme === "dark" ? (
-            <Sun className="h-5 w-5" />
-          ) : (
-            <Moon className="h-5 w-5" />
-          )}
-          <span className="sr-only">Toggle theme</span>
-        </Button>
+        <Clock />
+        <span className="flex gap-1">
+          <Button
+            variant="outline"
+            size="icon"
+            className="rounded-xs"
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+          >
+            {resolvedTheme === "dark" ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+          <Button variant="outline"
+            size="icon"
+            className="rounded-xs"><Github /></Button>
+        </span>
 
       </motion.section>
+
       {/* ABOUT SECTION */}
       <motion.section
         initial={{ y: 40, opacity: 0 }}
@@ -75,11 +83,8 @@ export default function Home() {
             </Link>
           </Button>
         </p>
-        {/* <p className="text-[var(--foreground)] my-2">Email : <Link href="mailto:yg292001@gmail.com" prefetch={false} className="underline">yg292001@gmail.com</Link>{" :)"}</p> */}
-
         <p className="text-base md:text-lg text-[var(--foreground)] max-w-xl mx-auto whitespace-pre-wrap">
           A programmer who can fix annoying bugs, create something awesome, or make someone&apos;s dream a reality.</p>
-
       </motion.section>
 
       {/* TECH STACK SECTION */}
@@ -137,8 +142,6 @@ export default function Home() {
         <h3 className="text-xl font-semibold mb-2">Badges</h3>
         <Image src={'/holopin.png'} width={"600"} height={"200"} className="w-full object-cover" alt="holpoin board"></Image>
       </motion.section>
-
-
 
       {/* CONTACT SECTION */}
       <motion.section initial={{ y: 40, opacity: 0 }}
