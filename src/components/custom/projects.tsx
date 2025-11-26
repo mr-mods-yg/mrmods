@@ -42,14 +42,13 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
     return <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
-        {isHomePage && <h3 className="text-lg font-semibold mb-2 text-start">Projects</h3>}
+        {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Projects</h3>}
         <div className="grid gap-6 md:grid-cols-2">
             <ProjectCard
                 imagePath="/driplist.png"
                 imageAlt="DripList Image"
                 name="DripList"
                 description="A platform for tracking your watched content, sharing reviews and discovering content."
-                isWorkInProgress={true}
                 technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL"]}
                 liveURL="https://driplist.in/"
             />
@@ -104,7 +103,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 }
 
 function TechnolgiesBadge({ text }: { text: string }) {
-    return <span className="py-1 px-2 outline-1 rounded-sm">{text}</span>
+    return <span className="py-1 px-2 outline-1 rounded-xs">{text}</span>
 }
 
 function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description, technologlies, liveURL, githubURL }: {
