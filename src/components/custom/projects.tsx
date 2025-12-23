@@ -28,7 +28,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     githubURL="https://github.com/mr-mods-yg/torrent-search"
                 />
                 <ProjectCard
-                    imagePath="/discord-moderation-bot.png"
+                    imagePath="/discord-moderation.png"
                     imageAlt="Discord Moderation bot Image"
                     name="Discord Moderation Bot"
                     description="A discord bot that helps server owners and administrators manage their online communities on Discord."
@@ -52,27 +52,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL"]}
                 liveURL="https://driplist.in/"
             />
-
-            <ProjectCard
-                imagePath="/virtualmeet.png"
-                imageAlt="VirtualMeet Image"
-                name="VirtualMeet"
-                description="A virtual event management platform where you can create, manage and explore events."
-                technologlies={["ReactJS", "MongoDB", "TailwindCSS", "ExpressJS", "Mongoose ORM"]}
-                liveURL="https://virtual-meet-psi.vercel.app/"
-                githubURL="https://github.com/mr-mods-yg/VirtualMeet"
-            />
-
-            <ProjectCard
-                imagePath="/shadowtalk.png"
-                imageAlt="ShadowTalk Image"
-                name="ShadowTalk"
-                description="A real-time room based chat platform with additional functionality of sending images."
-                technologlies={["ReactJS", "TailwindCSS", "ExpressJS", "Socket.io", "DaisyUI"]}
-                liveURL="https://shadow-talk-chat-app.vercel.app/"
-                githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"
-            />
-
             <ProjectCard
                 imagePath="/vernaan.png"
                 imageAlt="Vernaan Image"
@@ -82,9 +61,30 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 liveURL="https://vernaan.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
             />
+            <ProjectCard
+                imagePath="/virtual-meet.png"
+                imageAlt="VirtualMeet Image"
+                name="VirtualMeet"
+                description="A virtual event management platform where you can create, manage and explore events."
+                technologlies={["ReactJS", "MongoDB", "TailwindCSS", "ExpressJS", "Mongoose ORM"]}
+                liveURL="https://virtual-meet-psi.vercel.app/"
+                githubURL="https://github.com/mr-mods-yg/VirtualMeet"
+            />
+
+            <ProjectCard
+                imagePath="/shadow-talk.png"
+                imageAlt="ShadowTalk Image"
+                name="ShadowTalk"
+                description="A real-time room based chat platform with additional functionality of sending images."
+                technologlies={["ReactJS", "TailwindCSS", "ExpressJS", "Socket.io", "DaisyUI"]}
+                liveURL="https://shadow-talk-chat-app.vercel.app/"
+                githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"
+            />
+
+
             {!isHomePage && <>
                 <ProjectCard
-                    imagePath="/bytesEditor.png"
+                    imagePath="/bytes-editor.png"
                     imageAlt="BytesEditor Image"
                     name="Bytes code editor"
                     description="A simple code editor for creating, modifiying or/and debugging java programs."
