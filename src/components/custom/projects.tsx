@@ -13,7 +13,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     imagePath="/image-dither.png"
                     imageAlt="Torrent Search Image"
                     name="Image dither"
-                    description="A tool that can be used to dither a image using various algorithms."
+                    description="An image modification tool that can be used to dither a image using various algorithms and export the result."
                     technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
                     liveURL="https://dither-image-five.vercel.app/"
                     githubURL="https://github.com/mr-mods-yg/ditherImage"
@@ -48,7 +48,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imagePath="/driplist.png"
                 imageAlt="DripList Image"
                 name="DripList"
-                description="A platform for tracking your watched content, sharing reviews and discovering content."
+                description="A social platform for tracking your watched content, sharing reviews and discovering content and its opinions."
                 technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL"]}
                 liveURL="https://driplist.in/"
             />
@@ -56,7 +56,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imagePath="/vernaan.png"
                 imageAlt="Vernaan Image"
                 name="Vernaan - Landing page"
-                description="I made this landing page as an assignment in just three days. Figma design was given to me, I made it look similar, resposive and functional"
+                description="I made this landing page as an assignment in three days. Figma design was given to me, I made it look similar, resposive and functional"
                 technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
                 liveURL="https://vernaan.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
@@ -65,7 +65,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imagePath="/virtual-meet.png"
                 imageAlt="VirtualMeet Image"
                 name="VirtualMeet"
-                description="A virtual event management platform where you can create, manage and explore events."
+                description="A virtual event management platform where you can create, manage and explore virtual events and meetings."
                 technologlies={["ReactJS", "MongoDB", "TailwindCSS", "ExpressJS", "Mongoose ORM"]}
                 liveURL="https://virtual-meet-psi.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/VirtualMeet"
@@ -75,7 +75,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imagePath="/shadow-talk.png"
                 imageAlt="ShadowTalk Image"
                 name="ShadowTalk"
-                description="A real-time room based chat platform with additional functionality of sending images."
+                description="A real-time room based chat platform with functionalities such as typing indicator and sending images."
                 technologlies={["ReactJS", "TailwindCSS", "ExpressJS", "Socket.io", "DaisyUI"]}
                 liveURL="https://shadow-talk-chat-app.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"

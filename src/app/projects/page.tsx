@@ -7,12 +7,12 @@ export default function Projects() {
       <section className="w-full max-w-2xl mb-16">
         <Link className="text-lg underline" href={"/"}>Go back</Link>
         <h3 className="text-3xl md:text-4xl mt-5 font-bold tracking-tight">Projects</h3>
-        <h3 className="text-base md:text-lg my-5 tracking-tight">Here are some projects that I have completed in the past or currently working on.</h3>
+        <h3 className="text-base md:text-lg my-5 tracking-tight">Here are the projects that I have completed or currently working with.</h3>
 
         <ProjectsSection isHomePage={false} />
 
         <h3 className="text-2xl md:text-3xl mt-5 font-bold tracking-tight">Past/Side Projects</h3>
-        <h3 className="text-base md:text-lg my-5 tracking-tight">Here are some projects that I have made just for fun earlier in my career.</h3>
+        <h3 className="text-base md:text-lg my-5 tracking-tight">Here are some of the projects that I have made for fun and testing purposes.</h3>
 
         <ProjectsSection isHomePage={false} isSideProjects={true} />
 
