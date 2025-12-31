@@ -7,7 +7,7 @@ function TechStackSection() {
   return (
     <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
+        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-8">
         <h3 className="text-xl font-semibold mb-4 text-left">Tech Stack</h3>
         <div className="overflow-hidden whitespace-nowrap relative w-full">
           <motion.div

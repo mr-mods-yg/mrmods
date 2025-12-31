@@ -6,7 +6,7 @@
 :root {
   --accent: oklch(0.97 0 0);
   --radius: 0.625rem;
-  --card: oklch(0.97 0.01 90);
+  --card: oklch(89.768% 0.04892 87.568);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -92,7 +92,11 @@ a {
 }
 
 a:hover {
-  color: #0ea5e9;
+  color: #2563eb;
+}
+
+.dark a:hover {
+  color: #60a5fa;
 }
 
 ::-webkit-scrollbar {
@@ -107,7 +111,7 @@ a:hover {
 .dark {
   --background: oklch(0.20 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(25.723% 0.00149 16.173);
+  --card: oklch(0.23 0.00 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
