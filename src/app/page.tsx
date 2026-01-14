@@ -8,7 +8,7 @@ import ContactSection from "@/sections/contact-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-5 sm:py-12 bg-[var(--background)] text-[var(--foreground)]">
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-5 sm:py-12">
       <HeroBar/>
       <AboutSection/>
       <TechStackSection/>

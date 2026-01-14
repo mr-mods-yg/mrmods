@@ -7,7 +7,7 @@ function ContactSection() {
     return (
         <motion.section initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl border-t border-[#232323] pt-8">
+            transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl border-t border-[#232323] pt-8">
             <div className="flex justify-start gap-4">
                 <a href="https://github.com/mr-mods-yg" aria-label="GitHub" className="flex items-center gap-2 p-2 border rounded-xs"><Github />GitHub</a>
                 <a href="https://www.linkedin.com/in/mr-mods/" aria-label="LinkedIn" className="flex items-center gap-2 p-2 border rounded-xs"><Linkedin />LinkedIn</a>

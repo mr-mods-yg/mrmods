@@ -10,7 +10,7 @@ function AboutSection() {
     <motion.section
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl text-center mb-8" >
+      transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl text-center mb-8" >
       <Image src={"/profileAvatar.png"} alt="Yash Garg" width={100} height={100} className="mx-auto my-3" />
       <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">Yash Garg</h1>
       <h2 className="text-xl md:text-2xl font-mono text-[var(--color-blue-600)] dark:text-[var(--color-blue-400)] mb-4">Full Stack Developer</h2>
