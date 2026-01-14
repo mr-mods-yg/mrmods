@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 
 function HeroBar() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   return (
     <motion.section initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
@@ -23,9 +23,9 @@ function HeroBar() {
           variant="outline"
           size="icon"
           className="rounded-xs"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         >
-          {theme === "dark" ? (
+          {resolvedTheme === "dark" ? (
             <Sun className="h-5 w-5" />
           ) : (
             <Moon className="h-5 w-5" />
