@@ -8,7 +8,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2">
                 <ProjectCard
                     imagePath="/image-dither.png"
                     imageAlt="Torrent Search Image"
@@ -43,14 +43,24 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
         {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Featured Projects</h3>}
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2">
             <ProjectCard
                 imagePath="/driplist.png"
                 imageAlt="DripList Image"
                 name="DripList"
                 description="A social platform for tracking your watched content, sharing reviews and discovering content and its opinions."
-                technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL"]}
+                technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL", "NextAuth.js","Zustand"]}
                 liveURL="https://driplist.in/"
+            />
+            <ProjectCard
+                imagePath="/open-notion-landing.png"
+                imageAlt="Open Notion Image"
+                name="Open Notion"
+                description="A note-taking platform similar to notion which has block based editor and slash commands made from scratch."
+                technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "Better Auth", "TanStack query"]}
+                liveURL="https://open-notion.vercel.app"
+                githubURL="https://github.com/mr-mods-yg/open-notion"
+                isWorkInProgress
             />
             <ProjectCard
                 imagePath="/vernaan.png"
@@ -61,16 +71,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 liveURL="https://vernaan.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
             />
-            <ProjectCard
-                imagePath="/virtual-meet.png"
-                imageAlt="VirtualMeet Image"
-                name="VirtualMeet"
-                description="A virtual event management platform where you can create, manage and explore virtual events and meetings."
-                technologlies={["ReactJS", "MongoDB", "TailwindCSS", "ExpressJS", "Mongoose ORM"]}
-                liveURL="https://virtual-meet-psi.vercel.app/"
-                githubURL="https://github.com/mr-mods-yg/VirtualMeet"
-            />
-
             <ProjectCard
                 imagePath="/shadow-talk.png"
                 imageAlt="ShadowTalk Image"
@@ -83,6 +83,15 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 
 
             {!isHomePage && <>
+                <ProjectCard
+                    imagePath="/virtual-meet.png"
+                    imageAlt="VirtualMeet Image"
+                    name="VirtualMeet"
+                    description="A virtual event management platform where you can create, manage and explore virtual events and meetings."
+                    technologlies={["ReactJS", "MongoDB", "TailwindCSS", "ExpressJS", "Mongoose ORM"]}
+                    liveURL="https://virtual-meet-psi.vercel.app/"
+                    githubURL="https://github.com/mr-mods-yg/VirtualMeet"
+                />
                 <ProjectCard
                     imagePath="/bytes-editor.png"
                     imageAlt="BytesEditor Image"
@@ -128,7 +137,7 @@ function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description,
         <div className="px-5 pb-5">
             <h4 className="font-bold mb-1">{name}
                 {isWorkInProgress && isWorkInProgress === true && <span className="inline-flex items-center mx-2 rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-green-500 ring-1 ring-inset ring-green-500">
-                    Work in Progress
+                    In Progress
                 </span>}</h4>
             <p className="text-sm mb-2">{description}</p>
             <p className="text-sm mb-2 flex gap-1 items-center flex-wrap">

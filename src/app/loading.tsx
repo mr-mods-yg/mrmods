@@ -1,11 +1,11 @@
 import React from 'react'
 
-function loading() {
+function Loading() {
   return (
     <div className='min-h-svh flex justify-center items-center text-2xl'>
-      Loading
+      Almost there..``
     </div>
   )
 }
 
-export default loading
+export default Loading
