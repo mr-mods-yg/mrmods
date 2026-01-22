@@ -7,7 +7,7 @@ function TechStackSection() {
   return (
     <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl mb-8">
+        transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl pt-4 border-t border-[#232323] border-dashed mb-8">
         <h3 className="text-xl font-semibold mb-4 text-left">Tech Stack</h3>
         <div className="overflow-hidden whitespace-nowrap relative w-full">
           <motion.div
@@ -25,7 +25,7 @@ function TechStackSection() {
             {[...skills, ...skills].map((skill, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 border border-[var(--border)] text-[var(--foreground)] rounded-sm hover:opacity-80"
+                className="px-3 py-1 border border-[var(--border)] text-[var(--foreground)] rounded-sm hover:opacity-90"
               >
                 {skill}
               </span>

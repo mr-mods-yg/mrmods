@@ -6,7 +6,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
     if (isSideProjects) {
         return <motion.section initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
+            transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-8">
 
             <div className="grid gap-6 sm:grid-cols-2">
                 <ProjectCard
@@ -41,7 +41,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
     }
     return <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-16">
+        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl pt-4 border-t border-[#232323] border-dashed mb-8">
         {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Featured Projects</h3>}
         <div className="grid gap-6 sm:grid-cols-2">
             <ProjectCard
@@ -49,7 +49,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imageAlt="DripList Image"
                 name="DripList"
                 description="A social platform for tracking your watched content, sharing reviews and discovering content and its opinions."
-                technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL", "NextAuth.js","Zustand"]}
+                technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL", "NextAuth.js", "Zustand"]}
                 liveURL="https://driplist.in/"
             />
             <ProjectCard
@@ -102,12 +102,12 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 />
 
             </>}
-            {isHomePage ?
-                <Link href="/projects" className="mt-4 underline block">View All Projects</Link>
-                :
-                <></>
-            }
         </div>
+        {isHomePage ?
+            <Link href="/projects" className="mt-4 w-full flex justify-end underline">View All Projects</Link>
+            :
+            <></>
+        }
     </motion.section>
 }
 
@@ -134,7 +134,7 @@ function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description,
                 className="h-full w-full rounded-lg object-cover"
             />
         </div>
-        <div className="px-5 pb-5">
+        <div className="px-4 pb-2">
             <h4 className="font-bold mb-1">{name}
                 {isWorkInProgress && isWorkInProgress === true && <span className="inline-flex items-center mx-2 rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-green-500 ring-1 ring-inset ring-green-500">
                     In Progress
