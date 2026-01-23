@@ -16,9 +16,9 @@ function ContactSection() {
                 <a href="https://x.com/mr_mods_yg" aria-label="X (Twitter)" className="flex items-center gap-2 p-2 border rounded-xs"><Twitter className='text-blue-500' />Twitter</a>
                 <a href="https://github.com/sponsors/mr-mods-yg" aria-label="Sponsor" className="flex items-center gap-2 p-2 border rounded-xs"><Heart className='text-pink-500' />Sponsor</a>
             </div>
-            <div className="mt-10 flex justify-between w-full pt-5 text-lg border-t border-[#232323]">
-                <p>© {new Date().getFullYear()} Yash Garg {"(๑ > ᴗ < ๑)"}</p>
-                <p>Thank you for visiting {":)"}</p>
+            <div className="mt-10 flex justify-between w-full pt-5 text-base md:text-lg border-t border-[#232323]">
+                <p>© {new Date().getFullYear()} Yash Garg.</p>
+                <p>{"(๑ > ᴗ < ๑)"}</p>
             </div>
         </motion.section>
     )

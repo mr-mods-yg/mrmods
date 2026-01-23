@@ -41,7 +41,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
     }
     return <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl pt-4 border-t border-[#232323] border-dashed mb-8">
+        transition={{ duration: 0.5, ease: "easeOut" }} className={`w-full max-w-2xl pt-4 ${isHomePage && "border-t border-[#232323] border-dashed"} mb-8`}>
         {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Featured Projects</h3>}
         <div className="grid gap-6 sm:grid-cols-2">
             <ProjectCard
