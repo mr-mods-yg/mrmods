@@ -9,12 +9,12 @@ const skills = [
     'Zustand',
     'Postgres',
     'Prisma',
+    'Docker',
     'Socket.io',
     'Vercel',
     'Python',
     'Java',
     'Unity',
-    'Blender'
   ]
 
 export default skills;
