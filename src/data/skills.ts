@@ -12,9 +12,11 @@ const skills = [
     'Docker',
     'Socket.io',
     'Vercel',
+    'REST',
     'Python',
     'Java',
-    'Unity',
+    'HTML',
+    'CSS',
   ]
 
 export default skills;
