@@ -10,6 +10,14 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 
             <div className="grid gap-6 sm:grid-cols-2">
                 <ProjectCard
+                    imagePath="/bytes-editor.png"
+                    imageAlt="BytesEditor Image"
+                    name="Bytes code editor"
+                    description="A simple code editor for creating, modifiying or/and debugging java programs."
+                    technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
+                    githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
+                />
+                <ProjectCard
                     imagePath="/image-dither.png"
                     imageAlt="Torrent Search Image"
                     name="Image dither"
@@ -60,16 +68,14 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "Better Auth", "TanStack query"]}
                 liveURL="https://open-notion.vercel.app"
                 githubURL="https://github.com/mr-mods-yg/open-notion"
-                isWorkInProgress
             />
             <ProjectCard
-                imagePath="/vernaan.png"
-                imageAlt="Vernaan Image"
-                name="Vernaan - Landing page"
-                description="I made this landing page as an assignment in three days. Figma design was given to me, I made it look similar, resposive and functional"
-                technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
-                liveURL="https://vernaan.vercel.app/"
-                githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
+                imagePath="/agent.png"
+                imageAlt="Coding Agent Image"
+                name="Coding Agent"
+                description="An autonomous development terminal agent powered by AI that can execute commands, write files, and explore directories to complete user tasks."
+                technologlies={["TypeScript", "AI SDK by Vercel", "Groq AI"]}
+                githubURL="https://github.com/mr-mods-yg/coding-agent"
             />
             <ProjectCard
                 imagePath="/shadow-talk.png"
@@ -80,9 +86,16 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 liveURL="https://shadow-talk-chat-app.vercel.app/"
                 githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"
             />
-
-
             {!isHomePage && <>
+                <ProjectCard
+                    imagePath="/vernaan.png"
+                    imageAlt="Vernaan Image"
+                    name="Vernaan - Landing page"
+                    description="I made this landing page in three days. Figma design was given to me, I made it look similar, resposive and functional."
+                    technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
+                    liveURL="https://vernaan.vercel.app/"
+                    githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
+                />
                 <ProjectCard
                     imagePath="/virtual-meet.png"
                     imageAlt="VirtualMeet Image"
@@ -92,14 +105,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     liveURL="https://virtual-meet-psi.vercel.app/"
                     githubURL="https://github.com/mr-mods-yg/VirtualMeet"
                 />
-                <ProjectCard
-                    imagePath="/bytes-editor.png"
-                    imageAlt="BytesEditor Image"
-                    name="Bytes code editor"
-                    description="A simple code editor for creating, modifiying or/and debugging java programs."
-                    technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
-                    githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
-                />
+
 
             </>}
         </div>

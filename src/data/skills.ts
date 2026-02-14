@@ -10,6 +10,7 @@ const skills = [
     'Postgres',
     'Prisma',
     'Docker',
+    'AI SDKs',
     'Socket.io',
     'Vercel',
     'REST',
@@ -17,6 +18,7 @@ const skills = [
     'Java',
     'HTML',
     'CSS',
+
   ]
 
 export default skills;
