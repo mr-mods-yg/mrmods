@@ -137,6 +137,7 @@ function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description,
                 src={imagePath}
                 alt={imageAlt}
                 fill
+                unoptimized
                 className="h-full w-full rounded-lg object-cover"
             />
         </div>
