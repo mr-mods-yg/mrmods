@@ -94,7 +94,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                     description="I made this landing page in three days. Figma design was given to me, I made it look similar, resposive and functional."
                     technologlies={["NextJS", "TypeScript", "TailwindCSS"]}
                     liveURL="https://vernaan.vercel.app/"
-                    githubURL="https://github.com/mr-mods-yg/ez-labs-vernaan"
+                    githubURL="https://github.com/mr-mods-yg/vernaan"
                 />
                 <ProjectCard
                     imagePath="/virtual-meet.png"
