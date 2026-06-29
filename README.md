@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Yash Garg (mrmods)
+
+A modern, responsive portfolio website built with **Next.js 15**, **TypeScript**, and **Tailwind CSS v4**. Showcases projects, skills, GitHub activity, and contact information in a sleek, animated interface.
+
+## Tech Stack
+
+| Category       | Technologies                                                                 |
+| -------------- | ---------------------------------------------------------------------------- |
+| **Framework**  | Next.js 15 (App Router, Turbopack)                                           |
+| **Language**   | TypeScript                                                                   |
+| **Styling**    | Tailwind CSS v4, `tw-animate-css`                                            |
+| **Animation**  | Framer Motion, Motion                                                         |
+| **UI**         | Radix UI Slot, shadcn/ui style components, Lucide Icons                      |
+| **Theme**      | next-themes (light / dark / system)                                          |
+| **Data**       | react-github-calendar (GitHub contribution graph)                             |
+| **Analytics**  | Umami (privacy-friendly)                                                     |
+| **Linting**    | ESLint 9, eslint-config-next                                                  |
+| **Font**       | Geist (by Vercel) via `next/font`                                            |
+
+## Features
+
+- **Hero Section** - Animated introduction with call-to-action
+- **About Section** - Personal bio and background
+- **Tech Stack** - Visual display of skills and technologies
+- **Projects** - Showcase of personal and professional projects
+- **GitHub Activity** - Live contribution calendar integration
+- **Badges & Achievements** - Credentials and milestones
+- **Contact Section** - Get in touch form/links
+- **Dark/Light Mode** - System-aware theme switching with next-themes
+- **Responsive Design** - Fully optimized for mobile, tablet, and desktop
+- **Smooth Animations** - Page transitions and scroll-triggered animations via Framer Motion
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/mr-mods-yg/mrmods.git
+cd mrmods
+
+# Install dependencies
+npm install
+
+# Start the development server (port 3400)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3400](http://localhost:3400) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+mrmods/
+├── public/                  # Static assets
+├── src/
+│   ├── app/                 # Next.js App Router pages
+│   │   ├── globals.css      # Global styles & Tailwind imports
+│   │   ├── layout.tsx       # Root layout with theme provider
+│   │   ├── page.tsx         # Home page (assembles all sections)
+│   │   ├── loading.tsx      # Loading state
+│   │   └── projects/        # Projects sub-page
+│   ├── components/
+│   │   ├── custom/          # Custom components (projects, etc.)
+│   │   ├── ui/              # Reusable UI primitives (shadcn-style)
+│   │   └── theme-provider.tsx
+│   ├── data/
+│   │   └── skills.ts        # Skills data
+│   ├── lib/                 # Utility functions
+│   └── sections/            # Page sections
+│       ├── hero-bar.tsx
+│       ├── about-section.tsx
+│       ├── tech-stack.tsx
+│       ├── badge-section.tsx
+│       ├── github-section.tsx
+│       └── contact-section.tsx
+├── components.json           # shadcn/ui configuration
+├── next.config.ts
+├── tailwind.config.*
+└── tsconfig.json
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Import the repository into Vercel
+3. Vercel auto-detects Next.js — no extra configuration needed
+
+Or deploy to any platform that supports Node.js.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with [Next.js](https://nextjs.org/) & [Tailwind CSS](https://tailwindcss.com/) | Designed & developed by [Yash Garg](https://github.com/mr-mods-yg)
