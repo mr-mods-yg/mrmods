@@ -10,14 +10,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 
             <div className="grid gap-6 sm:grid-cols-2">
                 <ProjectCard
-                    imagePath="/bytes-editor.png"
-                    imageAlt="BytesEditor Image"
-                    name="Bytes code editor"
-                    description="A simple code editor for creating, modifiying or/and debugging java programs."
-                    technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
-                    githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
-                />
-                <ProjectCard
                     imagePath="/image-dither.png"
                     imageAlt="Torrent Search Image"
                     name="Image dither"
@@ -53,6 +45,16 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
         {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Featured Projects</h3>}
         <div className="grid gap-6 sm:grid-cols-2">
             <ProjectCard
+                imagePath="/git-agent.png"
+                imageAlt="Git Agent Image"
+                name="Git Agent"
+                isWorkInProgress
+                description="A GitHub AI Agent which connects directly with GitHub to let you manage, query, and analyze your repositories, commits, releases, and issues securely and efficiently."
+                technologlies={["NextJS", "TypeScript", "shadcn/ui", "AI SDK", "Tool Calling", 'MCP']}
+                githubURL="https://github.com/mr-mods-yg/git-agent"
+                liveURL="https://git-agent-weld.vercel.app/"
+            />
+            <ProjectCard
                 imagePath="/driplist.png"
                 imageAlt="DripList Image"
                 name="DripList"
@@ -77,16 +79,24 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 technologlies={["TypeScript", "AI SDK by Vercel", "Groq AI"]}
                 githubURL="https://github.com/mr-mods-yg/coding-agent"
             />
-            <ProjectCard
-                imagePath="/shadow-talk.png"
-                imageAlt="ShadowTalk Image"
-                name="ShadowTalk"
-                description="A real-time room based chat platform with functionalities such as typing indicator and sending images."
-                technologlies={["ReactJS", "TailwindCSS", "ExpressJS", "Socket.io", "DaisyUI"]}
-                liveURL="https://shadow-talk-chat-app.vercel.app/"
-                githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"
-            />
             {!isHomePage && <>
+                <ProjectCard
+                    imagePath="/bytes-editor.png"
+                    imageAlt="BytesEditor Image"
+                    name="Bytes code editor"
+                    description="A simple code editor for creating, modifiying or/and debugging java programs."
+                    technologlies={["Java", "Swing(AWT)", "File Handling", "Terminal Management"]}
+                    githubURL="https://github.com/mr-mods-yg/Bytes-code-editor"
+                />
+                <ProjectCard
+                    imagePath="/shadow-talk.png"
+                    imageAlt="ShadowTalk Image"
+                    name="ShadowTalk"
+                    description="A real-time room based chat platform with functionalities such as typing indicator and sending images."
+                    technologlies={["ReactJS", "TailwindCSS", "ExpressJS", "Socket.io", "DaisyUI"]}
+                    liveURL="https://shadow-talk-chat-app.vercel.app/"
+                    githubURL="https://github.com/mr-mods-yg/shadow-talk-chat-app"
+                />
                 <ProjectCard
                     imagePath="/vernaan.png"
                     imageAlt="Vernaan Image"
