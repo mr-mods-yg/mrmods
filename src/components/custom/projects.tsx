@@ -60,7 +60,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 name="DripList"
                 description="A social platform for tracking your watched content, sharing reviews and discovering content and its opinions."
                 technologlies={["NextJS", "TypeScript", "TailwindCSS", "shadcn/ui", "Prisma", "PostgreSQL", "NextAuth.js", "Zustand"]}
-                liveURL="https://driplist.in/"
+                liveURL="https://link.driplist.in/portfolio"
             />
             <ProjectCard
                 imagePath="/open-notion-landing.png"
