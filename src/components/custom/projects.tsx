@@ -48,7 +48,6 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
                 imagePath="/git-agent.png"
                 imageAlt="Git Agent Image"
                 name="Git Agent"
-                isWorkInProgress
                 description="A GitHub AI Agent which connects directly with GitHub to let you manage, query, and analyze your repositories, commits, releases, and issues securely and efficiently."
                 technologlies={["NextJS", "TypeScript", "shadcn/ui", "AI SDK", "Tool Calling", 'MCP']}
                 githubURL="https://github.com/mr-mods-yg/git-agent"
