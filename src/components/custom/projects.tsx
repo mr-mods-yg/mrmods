@@ -2,11 +2,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, isSideProjects?: boolean }) {
     if (isSideProjects) {
         return <motion.section initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-2xl mb-8">
+            transition={{ duration: 0.5, ease: "easeOut" }} className="w-full max-w-3xl mb-8">
 
             <div className="grid gap-6 sm:grid-cols-2">
                 <ProjectCard
@@ -41,7 +42,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
     }
     return <motion.section initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }} className={`w-full max-w-2xl pt-4 ${isHomePage && "border-t border-[#232323] border-dashed"} mb-8`}>
+        transition={{ duration: 0.5, ease: "easeOut" }} className={`w-full max-w-3xl pt-4 ${isHomePage && "border-t border-[#232323] border-dashed"} mb-8`}>
         {isHomePage && <h3 className="text-xl font-semibold mb-2 text-start">Featured Projects</h3>}
         <div className="grid gap-6 sm:grid-cols-2">
             <ProjectCard
@@ -127,7 +128,7 @@ function ProjectsSection({ isHomePage, isSideProjects }: { isHomePage: boolean, 
 }
 
 function TechnolgiesBadge({ text }: { text: string }) {
-    return <span className="py-1 px-2 outline-1 rounded-xs">{text}</span>
+    return <span className="text-[11px] py-0.5 px-1.5 border border-border/50 text-muted-foreground rounded-xs">{text}</span>
 }
 
 function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description, technologlies, liveURL, githubURL }: {
@@ -150,20 +151,41 @@ function ProjectCard({ imagePath, imageAlt, name, isWorkInProgress, description,
                 className="h-full w-full rounded-lg object-cover"
             />
         </div>
-        <div className="px-4 pb-2">
-            <h4 className="font-bold mb-1">{name}
-                {isWorkInProgress && isWorkInProgress === true && <span className="inline-flex items-center mx-2 rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-green-500 ring-1 ring-inset ring-green-500">
-                    In Progress
-                </span>}</h4>
+        <div className="px-4 pb-3">
+            <div className="flex items-center gap-2.5 flex-wrap mb-1.5">
+                <h4 className="font-bold">{name}</h4>
+                {isWorkInProgress && isWorkInProgress === true && (
+                    <span className="inline-flex items-center rounded-xs bg-muted px-2 py-0.5 text-xs font-medium text-green-500 ring-1 ring-inset ring-green-500">
+                        In Progress
+                    </span>
+                )}
+                <div className="flex items-center gap-2">
+                    {liveURL && (
+                        <a
+                            href={liveURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-xs border border-border/70 bg-background/50 hover:bg-muted hover:border-border text-foreground transition-colors"
+                        >
+                            Live <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                    )}
+                    {githubURL && (
+                        <a
+                            href={githubURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-medium rounded-xs border border-border/70 bg-background/50 hover:bg-muted hover:border-border text-foreground transition-colors"
+                        >
+                            <Github className="w-3.5 h-3.5" /> GitHub
+                        </a>
+                    )}
+                </div>
+            </div>
             <p className="text-sm mb-2">{description}</p>
-            <p className="text-sm mb-2 flex gap-1 items-center flex-wrap">
+            <p className="text-xs flex gap-1 items-center flex-wrap">
                 {technologlies.map((technologlies) => <TechnolgiesBadge key={technologlies} text={technologlies} />)}
             </p>
-            <p className="flex gap-1">
-                {liveURL && <a href={liveURL} className="underline mr-3 text-[var(--accent)] text-md flex">Live</a>}
-                {githubURL && <a href={githubURL} className="mr-3 underline text-[var(--accent)] text-md">Github</a>}
-            </p>
-
         </div>
     </div>
 }

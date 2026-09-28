@@ -10,11 +10,11 @@ function AboutSection() {
     <motion.section
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl text-center mb-8" >
+      transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-3xl text-center mb-8" >
       <Image src={"/profileAvatar.png"} alt="Yash Garg" width={100} height={100} className="mx-auto my-3" />
       <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">Yash Garg</h1>
       <h2 className="text-xl md:text-2xl font-mono text-[var(--color-blue-600)] dark:text-[var(--color-blue-400)] mb-4">Full Stack Developer</h2>
-      <p className="flex gap-2 justify-center my-2">
+      <p className="flex gap-2 justify-center my-4">
         <Button variant={"outline"} className="rounded-xs hover:scale-103 transition-transform">
           <Link href="https://drive.google.com/file/d/1wMFjoYZUTdg0rs17RxET6tVH8vP9-9Xs/view?usp=sharing" className="flex gap-1 items-center">
             Resume <FileText />
@@ -27,9 +27,9 @@ function AboutSection() {
         </Button>
       </p>
       <p className="text-base md:text-lg text-start text-[var(--foreground)] whitespace-pre-wrap">
-        Hi, I am a <HighlightText>web developer</HighlightText> who
+        Hi, I&apos;m <HighlightText>Yash</HighlightText>, a 22-year-old <HighlightText>computer enthusiast</HighlightText> and <HighlightText>web developer</HighlightText> who
         builds <HighlightText>functional web applications</HighlightText>, debug <HighlightText>complex issues</HighlightText> and
-        help <HighlightText>ideas become real, reliable</HighlightText> software.</p>
+        love creating <HighlightText>ideas become real, reliable</HighlightText> software.</p>
     </motion.section>
   )
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-[var(--background)] text-[var(--foreground)]">
-      <section className="w-full max-w-2xl mb-16">
+      <section className="w-full max-w-3xl mb-16">
         <Link className="font-bold text-lg underline" href={"/"}>Go back</Link>
         <h3 className="text-3xl md:text-4xl pt-4 border-t border-[#232323] border-dashed mt-5 font-bold tracking-tight">Projects</h3>
         <h3 className="text-base md:text-lg pt-5 tracking-tight">Here are the projects that I have completed or currently working with.</h3>

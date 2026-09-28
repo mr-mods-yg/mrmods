@@ -8,14 +8,35 @@ function GithubSection() {
     return (
         <motion.section initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-2xl mb-8 pt-4 border-t border-[#232323] border-dashed flex flex-col gap-2 items-center">
+            transition={{ duration: 0.8, ease: "easeOut" }} className="w-full max-w-3xl mb-8 pt-4 border-t border-[#232323] border-dashed flex flex-col gap-2 items-center">
             <h3 className="text-xl font-semibold mb-2 w-full">Github Contributions</h3>
-            <GitHubCalendar
-                username="mr-mods-yg"
-                colorScheme={resolvedTheme as "light" | "dark"}
-                blockSize={12}
-                blockMargin={0.5}
-            />
+            {/* small screens */}
+            <div className='block sm:hidden'>
+                <GitHubCalendar
+                    username="mr-mods-yg"
+                    colorScheme={resolvedTheme as "light" | "dark"}
+                    blockSize={8}
+                    blockMargin={0.5}
+                />
+            </div>
+            {/* medium screens */}
+            <div className='hidden sm:block md:hidden'>
+                <GitHubCalendar
+                    username="mr-mods-yg"
+                    colorScheme={resolvedTheme as "light" | "dark"}
+                    blockSize={12}
+                    blockMargin={0.5}
+                />
+            </div>
+            {/* large screens */}
+            <div className='hidden md:block'>
+                <GitHubCalendar
+                    username="mr-mods-yg"
+                    colorScheme={resolvedTheme as "light" | "dark"}
+                    blockSize={14}
+                    blockMargin={0.5}
+                />
+            </div>
         </motion.section>
     )
 }
