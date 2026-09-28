@@ -8,7 +8,7 @@ const workExperience = [
         company: "Helios",
         period: "Jul 2026 — Present",
         description: "Building and maintaining full stack web applications, collaborating with the team, and shipping features end to end.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "AWS", "Python"],
+        technologies: ["Next.js", "JavaScript", "Tailwind CSS", "MongoDB", "AWS", "Python","Linux"],
     },
 ]
 
